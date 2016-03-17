@@ -1,6 +1,16 @@
-#include "estructuras.h"
+#include "funciones.c"
 
-main() {
+int main() {
+
+	alien* Aliens1=malloc (sizeof(alien));
+	datosAlien(Aliens1);
+	
+	planeta* Planetas1=malloc (sizeof(planeta));
+	datosPlaneta(Planetas1);
+	
+	idioma* Idiomas1=malloc (sizeof(idioma));
+	datosIdioma(Idiomas1);
+
 	alien * lista_aliens;
 	lista_aliens = malloc (sizeof(alien));
 	strcpy (lista_aliens->nombre , "ET");
@@ -42,7 +52,7 @@ main() {
 	printf ("%c\n",lista_aliens->planetas->oxigeno);
 	if (lista_aliens->planetas->siguiente != NULL){
 		printf ("Siguiente planeta: ");
-		printf ("%s\n",lista_aliens->planetas->siguiente);
+		printf ("%s\n",lista_aliens->planetas->siguiente->nombre);
 	} else
 		printf ("No hay otro planeta de procedencia de este alien.");
 	printf ("Idioma del alien: ");
@@ -53,12 +63,14 @@ main() {
 	printf ("%d\n",lista_aliens->idiomas->simbolos);
 	if (lista_aliens->idiomas->siguiente != NULL){
 		printf ("Siguiente idioma: ");
-		printf ("%s\n",lista_aliens->idiomas->siguiente);
+		printf ("%s\n",lista_aliens->idiomas->siguiente->nombre);
 	} else
 		printf ("Este alien no sabe más idiomas.\n");
 	if (lista_aliens->idiomas->planetas != NULL){
 		printf ("Planeta en el que se habla el idioma: ");
-		printf ("%s\n",lista_aliens->idiomas->planetas);
+		printf ("%s\n",lista_aliens->idiomas->planetas->nombre);
 	} else
 		printf ("ESte idioma no se habla en ningún planeta conocido.\n");
+
+	return 0;
 }
