@@ -30,6 +30,7 @@ struct idiomas_t {
 } typedef idioma;
 
 
+
 void datosAlien(alien*);
 void datosPlaneta(planeta*);
 void datosIdioma(idioma*);

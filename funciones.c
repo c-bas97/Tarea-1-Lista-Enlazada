@@ -1,4 +1,7 @@
 #include "estructuras.h"
+
+// while(getchar()!='\n'); se usa para limpiar buffer, fflush no da resultados
+
 void datosAlien(alien* nuevo)
 {
 	if(nuevo!=NULL)
@@ -11,7 +14,9 @@ void datosAlien(alien* nuevo)
 
 		char aux[20];
 		printf("\nDigite la especie del alien: ");
-		scanf("%s",&aux[0]);
+		//scanf("%s",&aux[0]);
+		fgets(aux, 20, stdin);
+		while(getchar()!='\n');
 		
 		nuevo->especie=malloc(sizeof(strlen(aux)));
 		strcpy(nuevo->especie,aux);
@@ -30,19 +35,23 @@ void datosPlaneta(planeta* nuevo)
 	if(nuevo!=NULL)
 	{
 		printf("\nDigite el nombre del planeta: ");
-		//fgets(nuevo->nombre, 30, stdin);
-		scanf("%s",&nuevo->nombre[0]);
+		fgets(nuevo->nombre, 30, stdin);
+		//scanf("%s",&nuevo->nombre[0]);
+		while(getchar()!='\n');
 		
 		printf("\nDigite starwars code del planeta: ");
 		scanf("%d",&nuevo->starwars_code);
+		while(getchar()!='\n');
 			
 		printf("\nTiene oxigeno s/n: ");
-		//nuevo->oxigeno=getchar();
-		scanf("%c",&nuevo->oxigeno);
+		nuevo->oxigeno=getchar();
+		//scanf("%c",&nuevo->oxigeno);
+		while(getchar()!='\n');
 		
 		printf("\nTiene agua s/n: ");
 		nuevo->agua=getchar();
-		//scanf("%c",&nuevo->agua);		
+		while(getchar()!='\n');
+			
 		nuevo->siguiente=NULL;
 	}
 	else
@@ -55,21 +64,22 @@ void datosIdioma(idioma* nuevo)
 	if(nuevo!=NULL)
 	{
 		printf("\nDigite el nombre del idioma: ");
-		//fgets(nuevo->nombre, 30, stdin);
-		scanf("%s",&nuevo->nombre[0]);
+		fgets(nuevo->nombre, 30, stdin);
+		//scanf("%s",&nuevo->nombre[0]);
+		while(getchar()!='\n');
 		
-		printf("\nTipo de idioma s/n: ");
-		//nuevo->tipo=getchar();
-		scanf("%c",&nuevo->tipo);
-		
-<<<<<<< HEAD
-=======
 		printf("\nTipo de idioma s/n: ");
 		nuevo->tipo=getchar();
+		//scanf("%c",&nuevo->tipo);
+		while(getchar()!='\n');
 		
->>>>>>> a902dd496fd7f99698352ae8bb470788ad747a74
+		printf("\nTipo de idioma s/n: ");
+		nuevo->tipo=getchar();
+		while(getchar()!='\n');
+		
 		printf("\nDigite la cantidad de simbolos: ");
 		scanf("%d",&nuevo->simbolos);
+		while(getchar()!='\n');
 		
 		nuevo->siguiente=NULL;
 		nuevo->planetas=NULL;		
