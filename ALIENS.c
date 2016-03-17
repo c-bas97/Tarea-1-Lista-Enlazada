@@ -14,6 +14,35 @@ int main() {
 	Aliens1 -> planetas = Planetas1;
 	Aliens1 -> idiomas = Idiomas1;
 	Idiomas1 -> planetas = Planetas1;
+<<<<<<< HEAD
+=======
+	
+/*
+	alien * lista_aliens;
+	lista_aliens = malloc (sizeof(alien));
+	strcpy (lista_aliens->nombre , "ET");
+	lista_aliens->id = 3;
+	lista_aliens -> especie = malloc (sizeof ( "Rarifero"));
+	strcpy (lista_aliens->especie , "Rarifero");
+		planeta * planets;
+		planets = malloc (sizeof(planeta));
+		strcpy (planets->nombre , "ETland");
+		planets->starwars_code = 23;
+		planets->agua = 'T';
+		planets->oxigeno = 'F';
+		planets->siguiente = 0;
+	lista_aliens->planetas = planets;
+		idioma * idiom;
+		idiom  = malloc(sizeof(idioma));
+		strcpy (idiom->nombre , "Etliano");
+		idiom->tipo = '4';
+		idiom->simbolos = 99;
+		idiom->siguiente = NULL;
+		idiom->planetas = planets;
+	lista_aliens->idiomas = idiom;
+	lista_aliens->siguiente = 0;
+*/
+>>>>>>> a902dd496fd7f99698352ae8bb470788ad747a74
 
 	printf ("----------------------------------------");
 

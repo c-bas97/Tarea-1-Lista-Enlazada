@@ -62,6 +62,12 @@ void datosIdioma(idioma* nuevo)
 		//nuevo->tipo=getchar();
 		scanf("%c",&nuevo->tipo);
 		
+<<<<<<< HEAD
+=======
+		printf("\nTipo de idioma s/n: ");
+		nuevo->tipo=getchar();
+		
+>>>>>>> a902dd496fd7f99698352ae8bb470788ad747a74
 		printf("\nDigite la cantidad de simbolos: ");
 		scanf("%d",&nuevo->simbolos);
 		
