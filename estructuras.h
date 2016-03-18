@@ -3,15 +3,14 @@
 #include <stdlib.h>
 
 struct alien_t {
-	
 	char nombre [30];
 	int id;
 	char *especie;
 	struct planetas_t * planetas;
 	struct idiomas_t * idiomas;
 	struct alien_t * siguiente;
-	
 } typedef alien;
+
 
 struct planetas_t {
 	char nombre[30];
@@ -21,6 +20,7 @@ struct planetas_t {
 	struct planetas_t * siguiente;
 } typedef planeta;
 
+
 struct idiomas_t {
 	char nombre[30];
 	char tipo;
@@ -29,7 +29,8 @@ struct idiomas_t {
 	struct planetas_t * planetas;
 } typedef idioma;
 
-void datosAlien(alien*);
-void  datosPlaneta(planeta*);
-void datosIdioma(idioma*);
 
+void datosAlien(alien*);
+void datosPlaneta(planeta*);
+void datosIdioma(idioma*);
+void impresion (alien*);
